@@ -5,5 +5,8 @@
   gather_facts: no
   sudo: yes
 
-  roles:              # the roles (configurations) to apply     - nginx
+  roles:              # the roles (configurations) to apply
     - common
+    - nginx
+    - php-fpm
+    - mysql-server
