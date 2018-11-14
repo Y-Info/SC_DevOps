@@ -1,23 +1,18 @@
-# provisioning/roles/common/tasks/main.yml
----
-- name: install python 2
-  raw: test -e /usr/bin/python || (apt -y update && apt install -y python-minimal)
-  tags:
-    - common
-
-- name: update the apt cache
-  apt: update_cache=yes
-  tags:
-    - common
-
-- name: Install packages
-  apt: pkg={{item}} state=latest
+- name: Install MySQL Packages
+  apt: pkg={{ item }} state=latest
   with_items:
-    - curl
-    - python-pip
-    - python-setuptools
-    - unzip
-    - vim
-    - virtualenv # Python virtual environment creator
+    - mysql-server
+    - libmysqlclient-dev
   tags:
-    - common
+    - mysql-server
+
+- name: Install the Python MySQL module (required for managing DB whith ansible)
+  pip:
+    name: MySQL-python
+  tags:
+    - mysql-server
+
+- name: create database
+  mysql_db:
+    name: "{{database_name}}"
+    state: present
