@@ -1,4 +1,5 @@
-SC_DevOps
+# SC_DevOps
 
-
-TP realiser par Alban Pierson et Thibault Mandon
+## Contributors 
+Alban Pierson <alban.pierson@ynov.com> \
+Thibault Mandon <thibault.mandon@ynov.com> \
