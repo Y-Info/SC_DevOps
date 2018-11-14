@@ -1,0 +1,9 @@
+# playbook.yml
+---
+- name: Symfony dev # name of the play
+  hosts: all        # hosts on which this play will be performed
+  gather_facts: no
+  sudo: yes
+
+  roles:              # the roles (configurations) to apply     - nginx
+    - common
