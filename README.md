@@ -1,5 +1,5 @@
 # SC_DevOps
 
-## Contributors 
+## Contributeurs
 Alban Pierson <alban.pierson@ynov.com> \
-Thibault Mandon <thibault.mandon@ynov.com> \
+Thibault Mandon <thibault.mandon@ynov.com>
